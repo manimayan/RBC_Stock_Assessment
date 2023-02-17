@@ -22,4 +22,4 @@ Supports&nbsp;  .txt,&nbsp;  .data,&nbsp;  .csv&nbsp;  file formats for uploadin
 
 #### Future Enhancements
 ➲ &nbsp; Spring WebFlux (supports asynchronous and event-driven processing for Stock Service API's). <br /> ➲ &nbsp; 
-Spring Batch can be implemented for Stock Service upload API (batch processing to handle huge volume of input). <br /> ➲ &nbsp; Code coverage can be improved by writing more unit test cases . <br /> ➲ &nbsp;  Can support Containerization (Docker) . <br /> ➲ &nbsp; Spring Profiles can be implemented to make the application support multi environment. <br /> ➲ &nbsp;  JSON Web Token(JWT) standard Can be implemented to improve Stock Service API security
+Spring Batch can be implemented for Stock upload API (batch processing to handle huge volume of input). <br /> ➲ &nbsp; Code coverage can be improved by writing more unit test cases . <br /> ➲ &nbsp;  Can support Containerization (Docker) . <br /> ➲ &nbsp; Spring Profiles can be implemented to make the application support multi environment. <br /> ➲ &nbsp;  JSON Web Token(JWT) standard Can be implemented to improve Stock Service API security
