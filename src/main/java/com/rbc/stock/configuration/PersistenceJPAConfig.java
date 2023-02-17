@@ -18,31 +18,32 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.Properties;
 
+/**
+ * @author Manimaran Palani
+ * @since 16-Feb-2023
+ */
+
 @Configuration
 @EnableTransactionManagement
 public class PersistenceJPAConfig {
+
+    @Value("${jdbc.driver}")
+    private String jdbcDriver;
+    @Value("${jdbc.url}")
+    private String jdbcUrl;
+    @Value("${jdbc.user}")
+    private String jdbcUser;
+    @Value("${jdbc.password}")
+    private String jdbcPassword;
+    @Value("${hibernate.showSql}")
+    private boolean hibernateShowSql;
+    @Value("${rbc.database.platform}")
+    private String databasePlatform;
 
     @Bean
     public static PropertySourcesPlaceholderConfigurer propertyPlaceHolderConfigurer() {
         return new PropertySourcesPlaceholderConfigurer();
     }
-    @Value("${jdbc.driver}")
-    private String jdbcDriver;
-
-    @Value("${jdbc.url}")
-    private String jdbcUrl;
-
-    @Value("${jdbc.user}")
-    private String jdbcUser;
-
-    @Value("${jdbc.password}")
-    private String jdbcPassword;
-
-    @Value("${hibernate.showSql}")
-    private boolean hibernateShowSql;
-
-    @Value("${rbc.database.platform}")
-    private String databasePlatform;
 
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {

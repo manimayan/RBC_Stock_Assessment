@@ -16,6 +16,11 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 import java.util.Arrays;
 
+/**
+ * @author Manimaran Palani
+ * @since 16-Feb-2023
+ */
+
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = {"com.rbc.stock.configuration", "com.rbc.stock"})
@@ -54,7 +59,7 @@ public class SpringConfig implements WebMvcConfigurer {
         final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         final CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.addAllowedOrigin("http://localhost:4200");
+        config.addAllowedOrigin("*");
         config.setAllowedHeaders(Arrays.asList("Origin", "Content-Type", "Accept"));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "OPTIONS", "DELETE", "PATCH"));
         source.registerCorsConfiguration("/**", config);

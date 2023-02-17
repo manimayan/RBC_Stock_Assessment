@@ -8,15 +8,14 @@ import org.springframework.http.client.ClientHttpResponse;
 
 import java.io.IOException;
 
+/**
+ * @author Manimaran Palani
+ * @since 16-Feb-2023
+ */
+
 @Slf4j
 public class ApiClientRequestInterceptor implements ClientHttpRequestInterceptor {
-    /**
-     * @param request   the request, containing method, URI, and headers
-     * @param body      the body of the request
-     * @param execution the request execution
-     * @return
-     * @throws IOException
-     */
+
     @Override
     public ClientHttpResponse intercept(HttpRequest request, byte[] body, ClientHttpRequestExecution execution) throws IOException {
         return null;

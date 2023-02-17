@@ -1,0 +1,26 @@
+
+  ___ ___  ___     ___ _____ ___   ___ _  __    ___ ___ _____   _____ ___ ___
+ | _ \ _ )/ __|   / __|_   _/ _ \ / __| |/ /   / __| __| _ \ \ / /_ _/ __| __|
+ |   / _ \ (__    \__ \ | || (_) | (__| ' <    \__ \ _||   /\ V / | | (__| _|
+ |_|_\___/\___|   |___/ |_| \___/ \___|_|\_\   |___/___|_|_\ \_/ |___\___|___|
+
+																	  V 1.0.0
+Run Instructions - RBC_Stock_Service
+
+Database Setup(MySql)
+  • import RBC_Stock_Service.sql into Database
+
+Run from IDE(IntelliJ)
+  • git clone (https://github.com/manimayan/RBC_Stock_Assessment.git)
+  • click open-> navigate to project folder-> select project.
+  • right click project-> select build module (RBC_Stock_Service)
+  • click RBCAssessmentApplication.java-> Run RBCRBCAssessmentApplication.java
+
+Run from Command Line Interface
+  • git clone (https://github.com/manimayan/RBC_Stock_Assessment.git)
+  • from command line, cd project folder
+  • run the below command to create war and deploy into preferred server.
+  • RBC_Stock_Service>gradlew.bat build
+
+   RBCAssessment-V1.0.0-plain.war
+
