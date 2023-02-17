@@ -21,6 +21,7 @@ Run from Command Line Interface
   • from command line, cd project folder
   • run the below command to create war and deploy into preferred server.
   • RBC_Stock_Service>gradlew.bat build
-
    RBCAssessment-V1.0.0-plain.war
+
+Import postman collection or try http://localhost:8081/swagger-ui/index.html to test the application
 
