@@ -51,8 +51,9 @@ public class StockController {
     public ResponseEntity<ServiceResponse> uploadStockData(@ApiParam(value = "stock data file", required = true)
                                                            @RequestPart("file") MultipartFile stockFile) {
         ServiceResponse response;
-        log.info("uploading stock data: " + stockFile.getOriginalFilename());
         try {
+            StockPrediction.validate(stockFile);
+            log.info("uploading stock data: " + stockFile.getOriginalFilename());
             int count = service.uploadStockData(stockFile);
             response = ServiceResponse.builder()
                     .rbcServiceCode(Constants.SUCCESSFULLY_CREATED_CD)

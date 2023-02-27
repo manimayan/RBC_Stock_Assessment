@@ -1,8 +1,10 @@
 package com.rbc.stock.model;
 
+import com.rbc.stock.exception.RBCStockException;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.Hibernate;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
@@ -71,24 +73,10 @@ public class StockPrediction implements Serializable {
         this.percentReturnNextDividend = input.getPercentReturnNextDividend();
     }
 
-    public StockPrediction(int quarter, String stock, String date, String open, String high, String low, String close, long volume,
-                           double percentChangePrice, double percentChangeVolumeOverLastWeek, long previousWeeksVolume, String nextWeeksOpen,
-                           String nextWeeksClose, double percentChangeNextWeeksPrice, int daysToNextDividend, double percentReturnNextDividend) {
-        this.quarter = quarter;
-        this.stockId = new StockId(stock, LocalDate.parse(date, DateTimeFormatter.ofPattern("M/d/yyyy")));
-        this.open = new BigDecimal(open);
-        this.high = new BigDecimal(high);
-        this.low = new BigDecimal(low);
-        this.close = new BigDecimal(close);
-        this.volume = volume;
-        this.percentChangePrice = percentChangePrice;
-        this.percentChangeVolumeOverLastWeek = percentChangeVolumeOverLastWeek;
-        this.previousWeeksVolume = previousWeeksVolume;
-        this.nextWeeksOpen = new BigDecimal(nextWeeksOpen);
-        this.nextWeeksClose = new BigDecimal(nextWeeksClose);
-        this.percentChangeNextWeeksPrice = percentChangeNextWeeksPrice;
-        this.daysToNextDividend = daysToNextDividend;
-        this.percentReturnNextDividend = percentReturnNextDividend;
+    public static void validate(MultipartFile stockFile) {
+        if (Objects.requireNonNull(stockFile.getOriginalFilename()).isEmpty()) {
+            throw new RBCStockException("not a valid file");
+        }
     }
 
     @Override
