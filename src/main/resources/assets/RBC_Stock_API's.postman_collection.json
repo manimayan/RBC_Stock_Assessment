@@ -1,137 +1,137 @@
 {
-	"info": {
-		"_postman_id": "1a0a4f0a-472f-41d4-90ca-a8f40aab2993",
-		"name": "RBC_Stock_API's",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "6912215"
-	},
-	"item": [
-		{
-			"name": "swagger",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8081/swagger-ui/index.html",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8081",
-					"path": [
-						"swagger-ui",
-						"index.html"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "uploadStock",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "file",
-							"type": "file",
-							"src": "/C:/Users/myste/Desktop/dow_jones_index.txt"
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:8081/rbc/stock/upload",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8081",
-					"path": [
-						"rbc",
-						"stock",
-						"upload"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "addStock",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"quarter\": 1,\r\n    \"stock\": \"HJK\",\r\n    \"date\": \"4/11/2011\",\r\n    \"open\": 16,\r\n    \"high\": 17,\r\n    \"low\": 16,\r\n    \"close\": 16,\r\n    \"volume\": 23965561,\r\n    \"percentChangePrice\": 3.79267,\r\n    \"percentChangeVolumeOverLastWeek\": 0.0,\r\n    \"previousWeeksVolume\": 0,\r\n    \"nextWeeksOpen\": 17,\r\n    \"nextWeeksClose\": 16,\r\n    \"percentChangeNextWeeksPrice\": -4.42849,\r\n    \"daysToNextDividend\": 26,\r\n    \"percentReturnNextDividend\": 0.182704\r\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8081/rbc/stock/add",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8081",
-					"path": [
-						"rbc",
-						"stock",
-						"add"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "getStock",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8081/rbc/stock/get/HJK",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8081",
-					"path": [
-						"rbc",
-						"stock",
-						"get",
-						"HJK"
-					]
-				}
-			},
-			"response": []
-		}
-	]
+  "info": {
+    "_postman_id": "1a0a4f0a-472f-41d4-90ca-a8f40aab2993",
+    "name": "RBC_Stock_API's",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "6912215"
+  },
+  "item": [
+    {
+      "name": "swagger",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/swagger-ui/index.html",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "swagger-ui",
+            "index.html"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "uploadStock",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/C:/Users/myste/Desktop/dow_jones_index.txt"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8081/rbc/stock/upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "rbc",
+            "stock",
+            "upload"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "addStock",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"quarter\": 1,\r\n    \"stock\": \"HJK\",\r\n    \"date\": \"4/11/2011\",\r\n    \"open\": 16,\r\n    \"high\": 17,\r\n    \"low\": 16,\r\n    \"close\": 16,\r\n    \"volume\": 23965561,\r\n    \"percentChangePrice\": 3.79267,\r\n    \"percentChangeVolumeOverLastWeek\": 0.0,\r\n    \"previousWeeksVolume\": 0,\r\n    \"nextWeeksOpen\": 17,\r\n    \"nextWeeksClose\": 16,\r\n    \"percentChangeNextWeeksPrice\": -4.42849,\r\n    \"daysToNextDividend\": 26,\r\n    \"percentReturnNextDividend\": 0.182704\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8081/rbc/stock/add",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "rbc",
+            "stock",
+            "add"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getStock",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/rbc/stock/get/HJK",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "rbc",
+            "stock",
+            "get",
+            "HJK"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
 }
